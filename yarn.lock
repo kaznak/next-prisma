@@ -1161,10 +1161,10 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.4.4.tgz#d94cbb3b354a07f1f5b80e554d6b9e34aba99e41"
   integrity sha512-9nKENeWRI6kQk44TbeqleIVtNLfcS3klVUepzl/ZCqzR5Bi06uqBCD277hdVvG/wL1pxA+R/pgJQLqnF5E2wPQ==
 
-"@prisma/cli@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.1.1.tgz#f06f5529dc2cdfef16586bdc44bd184a758cbc83"
-  integrity sha512-QtGZ7KgfeIGVT/SGHI+WoZfvKRiyZ/euafjRGEE2pU/OzT+snSt2gNAjra0JdH5j8onfktZYmdkkgKu+dW9e2w==
+"@prisma/cli@^2.8.0":
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.8.0.tgz#919d7f66023affa76d14823212b62a8512cfd37d"
+  integrity sha512-Kg1C47d75jdEIMmJif8TMlv/2Ihx08E1qWp0euwoZhjd807HGnjgC9tJYjTfkdf+NMJSAUbvoPXKInEX0HoOMw==
 
 "@prisma/client@2.1.1":
   version "2.1.1"
