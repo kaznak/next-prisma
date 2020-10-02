@@ -19,7 +19,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "db": "prisma studio --experimental",
+    "db": "prisma studio",
     "db-save": "prisma migrate save --experimental",
     "db-up": "prisma migrate up --experimental",
     "generate": "prisma generate"
