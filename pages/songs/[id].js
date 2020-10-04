@@ -1,15 +1,10 @@
-import { PrismaClient } from '@prisma/client';
 import { Box, Heading, Text, Button } from '@chakra-ui/core';
 import NextLink from 'next/link';
+import { songs as songList } from '../api/songs'
+import { song as songDetail } from '../api/song/[id]'
 
 export async function getStaticProps({ params }) {
-  const prisma = new PrismaClient();
-  const song = await prisma.song.findOne({
-    include: { artist: true },
-    where: {
-      id: Number(params.id)
-    }
-  });
+  const song =  await songDetail(params)
 
   return {
     props: {
@@ -19,13 +14,12 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const prisma = new PrismaClient();
-  const songs = await prisma.song.findMany();
+  const songs = await songList({})
 
   return {
-    paths: songs.map((song) => ({
+    paths: songs.map(({ id }) => ({
       params: {
-        id: song.id.toString()
+        id: id.toString()
       }
     })),
     fallback: false
