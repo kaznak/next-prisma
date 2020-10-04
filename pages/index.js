@@ -1,13 +1,10 @@
-import { PrismaClient } from '@prisma/client';
 import { List, Heading } from '@chakra-ui/core';
+import { songs as songList } from './api/songs'
 
 import Song from '../components/Song';
 
 export async function getStaticProps() {
-  const prisma = new PrismaClient();
-  const songs = await prisma.song.findMany({
-    include: { artist: true }
-  });
+  const songs = await songList({});
 
   return {
     props: {
